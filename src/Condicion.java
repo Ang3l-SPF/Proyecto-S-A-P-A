@@ -1,26 +1,18 @@
 import java.util.Arrays;
 
 public class Condicion {
-    private char variable;//n m
-    private char[] limites;//>= >
-    private Paridad paridad;//par impar indif
+    private String limites;//>= >
+    private String operacion; // dividio en 2 +1 *2 e
+    private Paridad paridad;//par impar indiferente
         private enum Paridad{
-        par, impar, indif
+        par, impar, indiferente
     }
-
-    public char getVariable() {
-        return variable;
-    }
-
-    public void setVariable(char variable) {
-        this.variable = variable;
-    }
-
-    public char[] getLimites() {
+    
+    public String getLimites() {
         return limites;
     }
 
-    public void setLimites(char[] limites) {
+    public void setLimites(String limites) {
         this.limites = limites;
     }
 
@@ -36,8 +28,8 @@ public class Condicion {
     public String toString() {
         return "Condicion{" +
                 "variable=" + variable +
-                ", limites=" + Arrays.toString(limites) +
-                ", paridad=" + paridad +
+                ", limites=" + limites +
+                "es paridad=" + paridad +
                 '}';
     }
 }
