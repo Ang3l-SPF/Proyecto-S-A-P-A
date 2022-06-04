@@ -2,12 +2,13 @@ import java.util.Arrays;
 
 public class Condicion {
     private String limites;//>= >
-    private String operacion; // dividio en 2 +1 *2 e
+    private String operacion; // dividio en 2, +1 *2 etc
+    private float veces;
     private Paridad paridad;//par impar indiferente
         private enum Paridad{
         par, impar, indiferente
     }
-    
+
     public String getLimites() {
         return limites;
     }
@@ -24,12 +25,19 @@ public class Condicion {
         this.paridad = paridad;
     }
 
-    @Override
-    public String toString() {
-        return "Condicion{" +
-                "variable=" + variable +
-                ", limites=" + limites +
-                "es paridad=" + paridad +
-                '}';
+    public String getOperacion() {
+        return operacion;
+    }
+
+    public void setOperacion(String operacion) {
+        this.operacion = operacion;
+    }
+
+    public float getVeces() {
+        return veces;
+    }
+
+    public void setVeces(float veces) {
+        this.veces = veces;
     }
 }
